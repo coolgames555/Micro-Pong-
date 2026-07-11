@@ -1,0 +1,19 @@
+
+# Micro Pong
+
+**Micro Pong is a small, credit card-sized game console that is powered by an ESP-32 microcontroller. The display is a 12x12 led dot matrix controlled by a IS31FL3737 matrix controller IC.**
+## BOM 
+|Product | URL|
+|--|--|
+|Battery|[3.7V 3000mAh ](https://www.amazon.com/MakerFocus-Rechargeable-Protection-Insulated-Development/dp/B0DK5BBKM5?dib=eyJ2IjoiMSJ9.WnF3Z4y_OX26pdsnlWx1shPEVNbwNN6gv6J1ObR5PnEAbmWJ5waNPBF4BfMD0P3Jb5pj1mvIag-f9BLx2MLk2k4kZ3nWt3_7h4wvHp5go31jM3BKPcifqRZSWq4k5ioI6fgLO1tbawFB9r9KQ9bMOlZbP_8V_9Wuy7xIV8rLXchVRAh8EwnP22sB1qdiSHa3QS1xbCtFHgLiGXE2iWk1JmK-SF0iWWQCPk4m9ld-CDg3tXa8LqtIuHO9LAjI08eJKyNZVAO1sku9ZHU4ESsgoIZNdIStqpOYeVel0J3adqY.vgbmgELkkapo_j8Biprv3jPeE5Ll8_TFGKcU1NuOqVs&dib_tag=se&keywords=battery%2bjst&qid=1783732191&sr=8-5&th=1) |
+|LEDs|(order 2) [SMD0805 Blue led x100](https://www.aliexpress.us/item/3256811489107966.html?spm=a2g0o.productlist.main.22.651b1e41v7O1bD&algo_pvid=e6c703ef-aa3a-42fd-a8c4-d077bbb8b89b&algo_exp_id=e6c703ef-aa3a-42fd-a8c4-d077bbb8b89b-21&pdp_ext_f=%7B%22order%22:%225%22,%22eval%22:%221%22,%22fromPage%22:%22search%22%7D&pdp_npi=6@dis!USD!4.00!4.00!!!4.00!4.00!@2101e80317837326897743051ee818!12000056219366239!sea!US!6300737730!X!1!0!n_tag:-29919;d:ba20193c;m03_new_user:-29895&curPageLogUid=Tss5cNsyWTwT&utparam-url=scene:search%7Cquery_from:%7Cx_object_id:1005011675422718%7C_p_origin_prod:)|
+|Resistors|(a bit overkill)  [SMD 0805 Bulk](https://www.aliexpress.us/item/3256810333170724.html?spm=a2g0o.productlist.main.2.1de7230bmCZ65m&algo_pvid=e3dc4ca7-0b44-440d-b8e2-1379f7e95cc4&algo_exp_id=e3dc4ca7-0b44-440d-b8e2-1379f7e95cc4-1&pdp_ext_f=%7B%22order%22:%222372%22,%22eval%22:%221%22,%22fromPage%22:%22search%22%7D&pdp_npi=6@dis!USD!10.70!5.35!!!72.20!36.10!@2101eecd17837330762928322e8bf1!12000052676754449!sea!US!6300737730!X!1!0!n_tag:-29919;d:ba20193c;m03_new_user:-29895&curPageLogUid=etOaqJDjIrEH&utparam-url=scene:search%7Cquery_from:%7Cx_object_id:1005010519485476%7C_p_origin_prod:)
+|Potentiometers|(order 2) [Bourns 3269X 103](https://www.mouser.com/ProductDetail/Bourns/3269X-1-103GLF?qs=QqbjBpkYFu4FikhsusKHUQ==&mgh=1)|
+|Capacitors| [SMD 0805 Bulk](www.aliexpress.us/item/3256808433617101.html?spm=a2g0o.productlist.main.7.67255d7egbsUil&algo_pvid=ff64cc55-0f87-4e62-a067-3c8f25369017&algo_exp_id=ff64cc55-0f87-4e62-a067-3c8f25369017-6&pdp_ext_f=%7B%22order%22:%225937%22,%22eval%22:%221%22,%22fromPage%22:%22search%22%7D&pdp_npi=6@dis!USD!3.53!3.53!!!23.80!23.80!@2103126e17837342005251086e5e2b!12000045982292350!sea!US!6300737730!X!1!0!n_tag:-29919;d:ba20193c;m03_new_user:-29895&curPageLogUid=cAfrFgBJMgqM&utparam-url=scene:search%7Cquery_from:%7Cx_object_id:1005008619931853%7C_p_origin_prod:)|
+|Matrix IC| [IS31FL3737](https://www.digikey.com/en/products/detail/lumissil-microsystems/IS31FL3737-QFLS4-TR/6201947)|
+|Microcontroller|[ESP32-C3-WROOM-02-N4](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-C3-WROOM-02-N4/14553031)|
+|Switch| [CAS120A](https://www.digikey.com/en/products/detail/nidec-components/CAS-120TA/341661)|
+|Battery Charging IC| [BQ24090DGQ](https://www.amazon.com/BQ24090DGQR-BQ24090DGQ-BQ24090-TI24090-MSOP10/dp/B0BP7CT6J8)|
+|LDO Voltage Regulator| [AP2112K](https://www.amazon.com/dp/B0B811KL7D?dib=eyJ2IjoiMSJ9.B-ivKQyK5J5aHVxghbgxX9iKO1HTjArKNw301IN6Bp3kEFFNk8DX5jEUr4KJRekjtRyiFRbFmlexxyqL-vesz4AWDORY6mtLFkpfncQwI2JYrI1jcD7Msc4EF_s3Ze6IN5Q2H4MFF9eMZaW6PPlpQ5dsk7UwhlZaUw4nXXHnwK3SmOBm3MmOggdv-0pFisoVx3DdjEO46eFJb6Zkknc1-X7JHhQABxsTEH2-H5Ts0ZsEoewTO-NCBmgLl1u_OibPhEr_6RW8-UEx4LG6yOEANNFwbNVgcvhf8Eik-lF_aug.IzqzO5Jqa6t9uwA4lKRGq2LBvV2gjzt3TQqwnipagVQ&dib_tag=se&keywords=ap2112k-3.3&qid=1783735166&sr=8-2)|
+|USB-C Port| [12401598E4#2A](https://www.walmart.com/ip/Pack-5-12401598E4-2A-USB-C-USB-TYPE-C-USB-3-2-Gen-2-3-1-2-Superspeed-3-1-Receptacle-Connector-24-Position-Surface-Mount-Right-Angle-Through-Hole-RoHS/5514832476?wmlspartner=wlpa&selectedSellerId=101011733)| 
+
